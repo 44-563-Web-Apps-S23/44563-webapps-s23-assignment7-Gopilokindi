@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hunter</title>
+  <title>GAME</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -12,130 +12,195 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
   integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 <style>
-  p.mouse {
-    background-color:lightcoral ;
-    font-size:18px;
-  }
-  #bushes{
-    background-color:greenyellow ;
-    font-size: 18px;
-  }
-  #Penalty{
-    background-color: lightgray;
-    font-size:18px;
-  }
-  #help{
-    background-color: lemonchiffon;
-  }
-  #Click{
-    background-color: lightcyan;
-  }
-
-  .container {
-      display: flex;  
-  }
-   .container > div {  
-  margin-right: 90px;
-  margin-bottom: 20px;
-    }   
-
+    h1{
+        color: Blue;
+    }
+    p {
+        color: red;
+        cursor:copy;
+    }
+    #bushes {
+        color: green;
+    }
+    #penalty{
+        color: yellowgreen;
+    }
+    #help{
+        color: pink;
+    }
 </style>
 </head>
 <body>
 
 
-<div class="container-fluid">
-  <h1 class="text text-success">Find the mouse by GOPI LOKINDI</h1>
-  <p class="mouse">Click on the bushes to search for the mouse, beware the cat</p>
+  <h1>Find the mouse by LOKINDI GOPI</h1>
+  <p>Click on the bushes to search for the mouse, beware the cat</p>
   <p id="bushes">Number of bushes checked is zero.</p>
-  <p id="Penalty">Penalty is zero.</p>
-  <p id="Click">Click for help.</p>
-  <p id="help">“Help report</p>
- 
-
-  <div class="container">
-      <div class="row-2">
-        <img src="bushes.jpg" alt="bushes" height="100" width="100">
-      </div>
-      <div class="row-2">
-        <img src="bushes.jpg" alt="bushes" height="100" width="100">
-      </div>
-      <div class="row-2">
-        <img src="bushes.jpg" alt="bushes" height="100" width="100">
-      </div>
-      <div class="row-2">
-        <img src="bushes.jpg" alt="bushes" height="100" width="100">
-      </div>
-      <div class="row-2">
-        <img src="bushes.jpg" alt="bushes" height="100" width="100">
+  <p id="penalty">Penalty is zero.</p>
+  <p onclick="help()">Click for help. </p>
+  <p id="help">Help report.</p>
+    <p><button onclick="bonus()">Bonus</button></p>
+  <div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(0)" width="175" height="175" id="id0"></div>
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(1)" width="175" height="175" id="id1"></div>
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(2)" width="175" height="175" id="id2"></div>
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(3)" width="175" height="175" id="id3"></div>
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(4)" width="175" height="175" id="id4"></div>
+        <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(5)" width="175" height="175" id="id5"></div>
+    </div>
+</div>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(6)" width="175" height="175" id="id6"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(7)" width="175" height="175" id="id7"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(8)" width="175" height="175" id="id8"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(9)" width="175" height="175" id="id9"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(10)" width="175" height="175" id="id10"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(11)" width="175" height="175" id="id11"></div>
         </div>
-        <div class="row-2">
-            <img src="bushes.jpg" alt="bushes" height="100" width="100">
-          </div>
-   </div>
-
-  <div class="container">
-    <div class="row-2">
-      <img src="bushes.jpg" alt="mouse" height="100" width="100">
     </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="mouse" height="100" width="100">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(12)" width="175" height="175" id="id12"> </div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(13)" width="175" height="175" id="id13"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(14)" width="175" height="175" id="id14"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(15)" width="175" height="175" id="id15"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(16)" width="175" height="175" id="id16"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(17)" width="175" height="175" id="id17"></div>
+        </div>
     </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="mouse" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="mouse" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="mouse" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="mouse" height="100" width="100">
-    </div>
-  </div>
-
-  <div class="container">
- <div class="row-2">
-  <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
- <div class="row-2">
-    <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
- <div class="row-2">
-    <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
- <div class="row-2">
-    <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
- <div class="row-2">
-    <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
- <div class="row-2">
-    <img src="bushes.jpg" alt="Big cat" height="100" width="100">
- </div>
-  </div>
-
-  <div class="container">
-    <div class="row-2">
-      <img src="bushes.jpg" alt="grass" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="grass" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="grass" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="grass" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="grass" height="100" width="100">
-    </div>
-    <div class="row-2">
-        <img src="bushes.jpg" alt="grass" height="100" width="100">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(18)" width="175" height="175" id="id18"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(19)" width="175" height="175" id="id19"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(20)" width="175" height="175" id="id20"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(21)" width="175" height="175" id="id21"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(22)" width="175" height="175" id="id22"></div>
+            <div class="col-sm-2" ><img src="bushes.jpg" onclick="check(23)" width="175" height="175" id="id23"></div>
+        </div>
     </div>
 
-  </div>
+    <script>
+        let id='id';
+        let checkCount=0;
+        let penal=0;
+        let lastCheck=0;
+        let mouseLocation=13;
+        let catLocation=21;
+        let gameOver=false;
+        let ids=[ ];
+        for(let i=0;i<=23;i++){
+            ids[i]=id+i;
+          
+        }
+        function check(position){
+            if(gameOver==true){
+
+            }
+            else{
+                if(position==mouseLocation){
+                    id=ids[position]
+                    document.getElementById(id).src="mouse.jpg";
+                    gameOver=true;
+                    penal=penal-3;
+                }
+                else if(position==catLocation){
+                    id=ids[position]
+                    document.getElementById(id).src="cat.jpg";
+                    gameOver=true;
+                    penal=penal+4;
+                }
+                else {
+                    id=ids[position]
+                    document.getElementById(id).src="grass.jpg";
+                    checkCount+=1;
+                    penal+=1;
+                }
+                lastCheck=position;         
+            }          
+            bushes.innerHTML="Number of bushes checked is "+checkCount;
+            penalty.innerHTML="Penalty is "+penal;            
+        }
+        let row=0;
+        let row1=0;
+        let row2=0
+        let col1=0;
+        let col=0;
+        let col2=0;
+        function help()
+        {
+            let lastcol=lastCheck%6;
+            let lastrow=Math.floor(lastCheck/6);
+            let catcol=catLocation%6;
+            let catrow=Math.floor(catLocation/6);
+            let coldiff=Math.abs(lastcol-catcol);
+            let rowdiff=(Math.abs(lastrow-catrow));
+            let ratcol=mouseLocation%6;
+            let ratrow=Math.floor(mouseLocation/6);
+            let ratcoldiff=Math.abs(lastcol-ratcol);
+            let ratrowdiff=(Math.abs(lastrow-ratrow));
+            if(ratrowdiff<=1 && ratcoldiff<=1)
+            {
+                document.getElementById("help").innerHTML="squeek"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+            else if(rowdiff<=1 && coldiff<=1)
+            {
+                document.getElementById("help").innerHTML="Meow"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+            else{
+                document.getElementById("help").innerHTML="sorry, no help available"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+        }
+        let r1,r2,r3;
+        function bonus(){
+            r1=Math.floor(Math.random()*24);
+            r2=Math.floor(Math.random()*24);
+            r3=Math.floor(Math.random()*24);
+            lastCheck=r3;
+            catLocation=r1;
+            mouseLocation=r2;
+            bonus=0;
+            penal=0;
+            let lastcol=lastCheck%6;
+            let lastrow=Math.floor(lastCheck/6);
+            let catcol=catLocation%6;
+            let catrow=Math.floor(catLocation/6);
+            let coldiff=Math.abs(lastcol-catcol);
+            let rowdiff=(Math.abs(lastrow-catrow));
+            let ratcol=mouseLocation%6;
+            let ratrow=Math.floor(mouseLocation/6);
+            let ratcoldiff=Math.abs(lastcol-ratcol);
+            let ratrowdiff=(Math.abs(lastrow-ratrow));
+            if(ratrowdiff<=1 && ratcoldiff<=1)
+            {
+                document.getElementById("help").innerHTML="squeek"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+            else if(rowdiff<=1 && coldiff<=1)
+            {
+                document.getElementById("help").innerHTML="Meow"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+            else{
+                document.getElementById("help").innerHTML="sorry, no help available"
+                penal+=2;
+                penalty.innerHTML="Penalty is "+penal;
+            }
+        }
+    </script>
 </body>
 </html>
+
